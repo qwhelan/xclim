@@ -41,6 +41,25 @@ TESTS_DATA = os.path.join(TESTS_HOME, 'testdata')
 K2C = 273.15
 
 
+def compare_with_icclim(ind, nc):
+    """Compare the output of an xclim indicator with the output from icclim.
+
+    To install ICCLIM:
+    - Use Python2
+    - install cython, netcdftime then icclim
+
+    ICCLIM is very picky on input files. Using OCGIS as the driver seems to work best.
+    """
+    import xclim
+    import icclim
+
+
+    # x = xclim.icclim[ind]
+    # iout = icclim.indices(files, var_name, ind, freq, threshold=thresh, netcdf_version='NETCDF4_CLASSIC')
+
+
+
+
 class TestMaxNDayPrecipitationAmount:
 
     def time_series(self, values):
